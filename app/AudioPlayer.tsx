@@ -139,7 +139,7 @@ export function AudioPlayer({ songs, onClose }: AudioPlayerProps) {
       : 0;
 
   return (
-    <div className="fixed bottom-8 left-0 right-0 z-50 border-t border-white/10 bg-black/60 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2 backdrop-blur-sm sm:bottom-10 sm:bg-transparent sm:px-4 sm:pb-4 sm:pt-5 sm:backdrop-blur-none">
+    <div className="fixed bottom-20 left-1/2 z-50 w-[calc(100%-1.5rem)] max-w-3xl -translate-x-1/2 rounded-2xl border border-white/10 bg-black/55 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2 shadow-[0_10px_35px_rgba(0,0,0,0.45)] backdrop-blur-md sm:bottom-16 sm:px-4 sm:pb-4 sm:pt-5">
       <div className="mx-auto max-w-3xl">
         
         <div className="flex flex-col gap-2 sm:hidden">
