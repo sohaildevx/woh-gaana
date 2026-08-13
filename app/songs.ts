@@ -33,10 +33,8 @@ export const song:songs[] = [
     }
 ]
 
-const embedUrl = (song:songs) => {
-    `https://www.youtube.com/embed/${song.id}`;
-}
+export const embedUrl = (song: songs) =>
+  `https://www.youtube.com/embed/${song.id}`;
 
-export const tumbnailUrl = (song:songs) =>{
-    `https://i.ytimg.com/vi/${song.id}/maxresdefault.jpg`;
-}
+export const thumbnailUrl = (song: songs) =>
+  `https://i.ytimg.com/vi/${song.id}/maxresdefault.jpg`;

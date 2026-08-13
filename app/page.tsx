@@ -1,11 +1,21 @@
+"use client";
+
+import { useState } from "react";
+import { song } from "./songs";
+import { AudioPlayer } from "./AudioPlayer";
+
 export default function Home() {
+  const [showPlayer, setShowPlayer] = useState(true);
+
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-start overflow-hidden">
+    <div className="relative flex min-h-screen flex-col items-center overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/truck-img.png')" }}
       />
-      <main className="relative z-10 flex flex-col items-center gap-4 px-6 py-24 text-center text-white">
+      <div className="absolute inset-0 bg-black/50" />
+
+      <main className="relative z-10 flex w-full max-w-3xl flex-col items-center gap-8 px-6 py-24 text-center text-white pb-32">
         <h1
           className="font-[family-name:var(--font-baloo)] text-5xl font-extrabold leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)] sm:text-7xl"
           style={{
@@ -17,10 +27,17 @@ export default function Home() {
         >
           धीरे धीरे चलो, घर की याद
         </h1>
-        <p className="max-w-md text-lg drop-shadow text-yellow-400 font-bold">
+        <p className="max-w-md text-lg font-bold text-yellow-400 drop-shadow">
           Nostalgic gaane for the road — play it loud, driver.
         </p>
       </main>
+
+      {showPlayer && (
+        <AudioPlayer
+          songs={song}
+          onClose={() => setShowPlayer(false)}
+        />
+      )}
     </div>
   );
 }
