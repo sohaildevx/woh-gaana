@@ -15,7 +15,7 @@ export default function Home() {
       />
       <div className="absolute inset-0 bg-black/50" />
 
-      <main className="relative z-10 flex w-full max-w-3xl flex-col items-center gap-8 px-6 py-24 text-center text-white pb-32">
+      <main className="relative z-10 flex w-full max-w-3xl flex-1 flex-col items-center justify-start gap-8 px-6 py-16 text-center text-white">
         <h1
           className="font-[family-name:var(--font-baloo)] text-5xl font-extrabold leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)] sm:text-7xl"
           style={{
@@ -25,7 +25,8 @@ export default function Home() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          धीरे धीरे चलो, घर की याद
+          <span className="block">धीरे धीरे चलो,</span>
+          <span className="block">घर की याद</span>
         </h1>
         <p className="max-w-md text-lg font-bold text-yellow-400 drop-shadow">
           Nostalgic gaane for the road — play it loud, driver.
