@@ -81,6 +81,7 @@ export function AudioPlayer({ songs, onClose }: AudioPlayerProps) {
     const onReady = () => {
       playerRef.current?.setVolume(volume);
       playerRef.current?.loadVideoById(songs[indexRef.current].id);
+      setIsBuffering(false);
     };
 
     const onStateChange = (e: YT.OnStateChangeEvent) => {
@@ -97,7 +98,7 @@ export function AudioPlayer({ songs, onClose }: AudioPlayerProps) {
           setIsBuffering(false);
           break;
         case YT.PlayerState.BUFFERING:
-          setIsBuffering(true);
+          setIsBuffering(isPlayingRef.current);
           break;
         case YT.PlayerState.ENDED:
           setIsBuffering(false);

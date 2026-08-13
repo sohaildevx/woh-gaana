@@ -7,11 +7,6 @@ export type songs = {
 
 export const song:songs[] = [
     {
-       id:"P7P2zqzEYRY",
-       title:"Bahut Jatate Ho Chah Humse",
-       artist:"Alka Yagnik, Mohammed Aziz"
-    },
-    {
        id:"fBylcT-TWZw",
        title:"Ek Sanam Chahiye Aashiqui Ke Liye",
        artist:"Kumar Sanu"
@@ -40,6 +35,11 @@ export const song:songs[] = [
       id:"aj8Dsv36R1c",
       title:"Chori Chori Dil Tera Churayenge",
       artist:"Kumar Sanu, Sujata Goswamy"
+    },
+    {
+       id:"P7P2zqzEYRY",
+       title:"Bahut Jatate Ho Chah Humse",
+       artist:"Alka Yagnik, Mohammed Aziz"
     }
 ]
 
